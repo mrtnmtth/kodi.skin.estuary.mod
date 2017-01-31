@@ -26,6 +26,19 @@
 			<height>1080</height>
 			<include>OpenClose_Left</include>
 			<control type="image">
+				<left>280</left>
+				<top>225</top>
+				<include>Visible_Left</include>
+				<visible>Player.ShowInfo | Window.IsActive(musicosd)</visible>
+				<width>450</width>
+				<height>450</height>
+				<fadetime>400</fadetime>
+				<aspectratio align="bottom">keep</aspectratio>
+				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+				<texture background="true">$INFO[Player.FolderPath]cdart.png</texture>
+				<bordersize>0</bordersize>
+			</control>
+			<control type="image">
 				<left>33</left>
 				<top>200</top>
 				<include>Visible_Left</include>
