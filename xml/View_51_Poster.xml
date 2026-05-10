@@ -78,8 +78,8 @@
 					<top>25</top>
 					<control type="group">
 						<left>635</left>
-						<top>480</top>
-						<height>245</height>
+						<top>500</top>
+						<height>225</height>
 						<visible>ListItem.IsCollection + String.IsEmpty(ListItem.PlotOutline) + String.IsEmpty(ListItem.Plot)</visible>
 						<include content="InfoList">
 							<param name="bottom" value="0" />
@@ -97,10 +97,21 @@
 						<font>font45_title</font>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
+					<control type="label">
+						<left>645</left>
+						<top>445</top>
+						<right>50</right>
+						<height>40</height>
+						<label>$INFO[ListItem.OriginalTitle]</label>
+						<font>font36_title</font>
+						<textcolor>grey</textcolor>
+						<shadowcolor>text_shadow</shadowcolor>
+						<visible>!String.IsEmpty(ListItem.OriginalTitle) + !String.IsEqual(ListItem.OriginalTitle,ListItem.Title)</visible>
+					</control>
 					<control type="textbox">
 						<left>645</left>
-						<top>480</top>
-						<height>250</height>
+						<top>500</top>
+						<height>230</height>
 						<right>115</right>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$VAR[PlotTextBoxVar]</label>
